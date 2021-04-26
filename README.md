@@ -1,1 +1,1 @@
-# Design-Patters-Study
+# Design-Patterns-Study
