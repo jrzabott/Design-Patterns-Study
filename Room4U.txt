@@ -1,0 +1,145 @@
+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
+qwe123
+
+
+
+
+Room4U
+
+Objectivos: 
+	- Gestão de Salas da Altran.
+	- Apoiar gestores de projeto Altran para reserva de salas para equipas (e elementos) com diferentes setups.
+
+PERSON OF INTEREST: 
+	Mônica Azevedo
+	- responsável administrativa/logística da empresa, realiza a gestão via um ficheiro em Excel
+
+Background: 
+	- O objetivo é criar uma app em Java para realizar esta gestão.
+	- Existem regras de cálculo para cobrar uso das salas (integral ou parcial)
+		- Exemplo: multiuso do Fundão
+		- Salas podem ser partilhadas por diversos GP
+		- GPs podem gerenciar múltiplas equipas
+		- Salas são fracionadas por projeto (e não equipas)
+		- É cobrado por numero de cadeiras / seats (lugares)
+		- Cobranças otimizadas
+		- GPs têm de necessidades específicas (ex: 3 mesas)	
+		- 1 mesa possui duas cadeiras (COVID)
+		- Salas regulares e salas VIP (2 ou 3 categorias)
+		- Sala com catering (salas com serviços extra)
+
+Sites: 
+	- Lisboa (expo 98)
+	- Fundão
+	- Porto - Cais de Gaia
+	- Porto - Lake Towers 
+	- Lab 5G (não considerar)
+
+Structure: 
+	- App deve ser modularizada em
+		- BackOffice - gerir salas, gerir numero lugares, regras de cobranças, configurações de mesas e cadeiras
+		- FrontOffice - solicita reservas, configurações desejadas, visualiza disponibilidades das salas/lugares
+
+
+Team: 
+	Equipa de 5 pessoas (Barbara, João Ribeiro, João Raposo, Helder, Daniel)
+	Tools:
+		- Jira
+		- Sharepoint com repositório para equipa e troca de documentos
+		- Barbara - Testes
+		- João Raposo e Helder - FrontEnd
+		- Daniel e João Ribeiro - BackEnd
+	
+Other Info:
+	- Outsystems - Já houve uma tentativa de implementar a solução, porém sem sucesso.
+	- Ficheiro Excel auxiliar pode ajudar com o levantamento de requisitos
+	- 
+
+Actions:
+	- Levantamento de Requisitos
+		+ Há uma App X-Ray para tal.
+		+ Utilizar modelo / template desta app é uma acção desejadas
+	- Iremos receber um documento: Uma análise de requisitos realizada pelo Pedro Furtado no passado.
+	- Avaliar possíveis Inputs para atualização
+	- Design
+	- Autenticação via LDAP
+	
+	26/03/2021
+	25/06/2021
+	
+	
+	
+	
+==============================================
+Gestão dos Espaços do Escritório
+---------------------------
+Reunião com Mônica Azevedo - 16:00 20210412
+...
+
+Alocação correta de custos aos projetos
+para novos projetos (open space, confidencial, shared) existem novos custos
+Gestão é feita em um Excel
+PM solicitam # seats
+Mônica aloca seats aos PMs e seus projetos com os custos associados
+Formulas custo / lugar
+Total de seats por salas
+Salas 
+	Tipos: Project rooms ou Open Spaces
+	Ex: 10 lugares dedicados para um unico projeto
+	Custos (em sala dedicadas) são distribuídos ponderadamente por numero de seats alocados pra cada projeto
+	Salas dedicadas tem custo integral
+	Custos, em salas open space, ocorrem por #seat
+	Dimensionamento de salas é sempre o # máximo de cadeiras.
+	Valor da sala é fechado (integral) e definido pela Monica
+	Custos por localização / sala / lugar
+	
+Salas de reunião NÃO SÃO IMPUTADAS ao projeto.
+Reporting:
+	Custos mensais por projeto / PM - Projeção de custos do proximo mês.
+	# Seats ocupados / PM
+	Custos por Edifícios/Localidades
+	# Seats Livres
+	Relatório mensal com status dos projetos e custos associados a enviar para financeiro
+	Visualizações de ocupação / custos por escritórios
+
+Pedido de sala é feito através do GLPI pelo PM.
+	- Gestão de alocação de salas é feita pela própria Mônica
+	- Conhecimento do tempo de projeto também é possuído pela própria Mônica
+	- Não é necessária gestão de fila de pedidos
+	- Custo da salas é semestral.
+	- Movimentação/Alocação de salas é feito de forma semestral.
+	- Substituição de projetos (troca, encerramento prematuro, etc) podem vir a permitir movimentação de salas
+Notificações
+	- Mônica é notificada quando da criação de um projeto (novos custos de Facilities)
+	- Repositório de projetos (id do Maconomy)
+		- Deve conter registos de projetos "não-oficiais"
+	
+Log / Registo de alterações (armazenar histórico de alterações) - snapshots.
+	- Campo Observações ao salvar alterações. (antes do snapshot)
+
+Perfis
+	Admin
+	Financeiro
+	PM
+	
+Actions
+	Lista de PMs atualizada.
+
+
+
+
+
+Análise de Requisitos e Desenho da Solução
+
+Definição Rigorosa dos Requisitos
+Use Cases
+Mock-Ups
+Arquitetura de Páginas
+
+
+1. Atualização do Visual Studio Code
+2. Java 8
+3. Java IDE - IntelliJ / NetBeans
+4. GIMP
+5. Dbeaver
+6. GraphViz (https://graphviz.org/download/#windows)
